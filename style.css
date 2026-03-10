@@ -1,0 +1,70 @@
+/* Główne ustawienia i tło */
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+
+/* Wygładzenie karty */
+.card {
+    background-color: #ffffff;
+}
+
+/* Stylizacja elementów listy */
+#shopping-list {
+    min-height: 60px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#shopping-list li {
+    cursor: grab;
+    transition: all 0.2s ease-in-out;
+    border: none;
+    border-bottom: 1px solid #f0f0f0;
+    border-left: 4px solid transparent; /* Miejsce na efekt najechania */
+    font-size: 1.1rem;
+    padding: 12px 20px;
+}
+
+/* Usuwamy obramowanie dla ostatniego elementu */
+#shopping-list li:last-child {
+    border-bottom: none;
+}
+
+/* Efekt najechania na element (hover) */
+#shopping-list li:hover {
+    border-left-color: #0d6efd; /* Niebieski pasek z boku */
+    background-color: #f8f9fa;
+    transform: translateX(3px); /* Delikatne przesunięcie w prawo */
+}
+
+/* Gdy przeciągamy element */
+#shopping-list li:active {
+    cursor: grabbing;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Zaznaczony element (kliknięty do edycji) */
+#shopping-list li.active {
+    background-color: #e9ecef !important;
+    border-color: #dee2e6;
+    transform: none;
+}
+
+/* Input pojawiający się podczas edycji (fade in/out z JS) */
+.edit-input {
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 5px 10px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
+}
+
+.edit-input:focus {
+    outline: none;
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
